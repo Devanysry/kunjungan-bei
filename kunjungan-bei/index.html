@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kunjungan Industri Bursa Efek Indonesia</title>
+  <meta name="description" content="Digital Documentation of Industrial Visit: dokumentasi kunjungan industri ke Bursa Efek Indonesia (BEI).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a href="#beranda" class="brand"><span class="brand-dot"></span>Visit<b>BEI</b></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="links" id="links">
+      <a href="#profil">Profil BEI</a>
+      <a href="#kegiatan">Kegiatan</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#vlog">Vlog</a>
+      <a href="#refleksi">Refleksi</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Ganti tema terang/gelap">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+      <div class="hero-bg"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Digital Documentation of Industrial Visit</p>
+        <h1>Menyelami Jantung <em>Pasar Modal</em> Indonesia</h1>
+        <p class="lead">Catatan visual kunjungan industri ke Bursa Efek Indonesia, Jakarta. Dari galeri sejarah, zona investasi, hingga Main Hall tempat denyut pasar modal terasa.</p>
+        <div class="cta">
+          <a class="btn primary" href="#vlog">▶ Tonton Vlog 90 Detik</a>
+          <a class="btn ghost" href="#galeri">Lihat Galeri</a>
+        </div>
+        <dl class="meta">
+          <div><dt>Lokasi</dt><dd>Gedung BEI, Jakarta</dd></div>
+          <div><dt>Tanggal</dt><dd id="metaTanggal">23 November 2026</dd></div>
+          <div><dt>Disusun oleh</dt><dd class="js-nama">Nama Siswa</dd></div>
+        </dl>
+      </div>
+      <a href="#profil" class="scroll-hint" aria-label="Gulir ke bawah">↓</a>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
+    </div>
+
+    <!-- PROFIL -->
+    <section class="section" id="profil">
+      <div class="wrap">
+        <p class="kicker">01 · Profil</p>
+        <h2>Mengenal Bursa Efek Indonesia</h2>
+        <div class="profil-grid">
+          <div class="reveal">
+            <p>Bursa Efek Indonesia (BEI, atau <i>Indonesia Stock Exchange</i> / IDX) adalah lembaga yang menyelenggarakan dan menyediakan sistem serta sarana untuk mempertemukan penawaran jual dan beli efek. Di sinilah saham, obligasi, reksa dana, ETF, dan instrumen lain diperdagangkan secara teratur, wajar, dan efisien.</p>
+            <p>BEI bekerja bersama lembaga lain di ekosistem pasar modal: <b>OJK</b> sebagai pengawas, <b>KSEI</b> sebagai penyimpan dan penyelesaian efek, serta <b>iDClear</b> sebagai lembaga kliring dan penjaminan penyelesaian transaksi. Ketiganya tampak pada materi edukasi di lobi gedung.</p>
+            <div class="chips">
+              <span>Saham</span><span>Obligasi</span><span>Reksa Dana</span><span>ETF</span><span>Edukasi Investor</span>
+            </div>
+          </div>
+          <figure class="profil-photo reveal">
+            <img src="assets/img/foto-09.jpg" alt="Gerbang Bursa Efek Indonesia dengan logo IDX" loading="lazy">
+            <figcaption>Logo IDX di lobi Gedung BEI</figcaption>
+          </figure>
+        </div>
+
+        <h3 class="sub">Capaian BEI yang tercatat di papan pameran</h3>
+        <div class="stats" id="stats"></div>
+        <p class="note">Angka diambil dari Papan Pencapaian BEI Sepanjang Tahun 2025 yang kami foto saat kunjungan.</p>
+
+        <h3 class="sub">Lini masa sejarah (klik untuk detail)</h3>
+        <div class="timeline" id="timeline" role="tablist"></div>
+        <div class="timeline-detail" id="timelineDetail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- KEGIATAN -->
+    <section class="section alt" id="kegiatan">
+      <div class="wrap">
+        <p class="kicker">02 · Rangkaian Kegiatan</p>
+        <h2>Alur Kunjungan dari Lobi hingga Main Hall</h2>
+        <p class="sub-lead">Pilih tahap kegiatan untuk melihat apa yang kami lihat dan pelajari.</p>
+        <div class="activity">
+          <ol class="steps" id="steps" role="tablist"></ol>
+          <article class="step-card" id="stepCard" aria-live="polite">
+            <img id="stepImg" src="" alt="">
+            <div class="step-body">
+              <span class="step-num" id="stepNum"></span>
+              <h3 id="stepTitle"></h3>
+              <p id="stepText"></p>
+              <p class="learn"><b>Yang dipelajari:</b> <span id="stepLearn"></span></p>
+              <div class="step-nav">
+                <button class="btn ghost sm" id="prevStep">← Sebelumnya</button>
+                <button class="btn primary sm" id="nextStep">Berikutnya →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="section" id="galeri">
+      <div class="wrap">
+        <p class="kicker">03 · Galeri</p>
+        <h2>Galeri Dokumentasi</h2>
+        <p class="sub-lead"><span id="countFoto">13</span> foto dokumentasi. Klik foto untuk memperbesar, gunakan tombol panah keyboard untuk berpindah.</p>
+        <div class="filters" id="filters"></div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- VLOG -->
+    <section class="section alt" id="vlog">
+      <div class="wrap">
+        <p class="kicker">04 · Vlog</p>
+        <h2>Vlog Kunjungan Industri (90 Detik)</h2>
+        <div class="vlog">
+          <div class="player">
+            <video id="vlogVideo" controls preload="metadata" playsinline poster="assets/img/poster-vlog.jpg">
+              <source src="assets/video/vlog-kunjungan-bei.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutar video.
+            </video>
+          </div>
+          <aside class="chapters">
+            <h3>Bab video</h3>
+            <ul id="chapters"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFLEKSI -->
+    <section class="section" id="refleksi">
+      <div class="wrap">
+        <p class="kicker">05 · Kesimpulan dan Refleksi</p>
+        <h2>Apa yang Kami Bawa Pulang</h2>
+        <div class="conclusion">
+          <div class="reveal">
+            <h3 class="sub">Kesimpulan</h3>
+            <p id="kesimpulan"></p>
+          </div>
+          <blockquote class="quote reveal">
+            <p>“If you are born poor it's not your mistake, but if you die poor it's your mistake.”</p>
+            <cite>Kutipan di dinding galeri BEI, tertulis atas nama Bill Gates</cite>
+          </blockquote>
+        </div>
+
+        <h3 class="sub">Refleksi pribadi</h3>
+        <div class="cards" id="refleksiCards"></div>
+
+        <h3 class="sub">Uji pemahaman: kuis mini</h3>
+        <div class="quiz" id="quiz"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><b>Digital Documentation of Industrial Visit</b> · Bursa Efek Indonesia</p>
+      <p class="js-identitas">Nama Siswa · Kelas · Sekolah</p>
+      <p class="small">Dibuat dengan HTML, CSS, dan JavaScript. Seluruh foto dan video merupakan dokumentasi pribadi selama kunjungan.</p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" id="lbClose" aria-label="Tutup">✕</button>
+    <button class="lb-nav prev" id="lbPrev" aria-label="Foto sebelumnya">‹</button>
+    <figure>
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav next" id="lbNext" aria-label="Foto berikutnya">›</button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
